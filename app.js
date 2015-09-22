@@ -22,14 +22,6 @@ app.config(function($routeProvider){
 app.controller('MainCtrl', function(){
 	self = this;
 
-	self.subreddits = [
-		{ name: 'angularjs' },
-		{ name: 'learnjavascript' },
-		{ name: 'learnprogramming' },
-		{ name: 'javascript' },
-		{ name: 'web_design' },
-		{ name: 'webdev' }
-	];	
 });
 
 app.controller('ApiCtrl', ['apiService', function(apiService) {
