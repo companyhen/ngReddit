@@ -1,1 +1,7 @@
-<p>insert post titles here</p>
+<div ng-controller="ApiCtrl as vm">
+	<ul>
+		<li ng-repeat="post in vm.posts">
+			<a href="{{ post.data.url }}">{{ post.data.title }}</a>
+		</li>
+	</ul>
+</div>

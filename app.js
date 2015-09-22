@@ -29,9 +29,18 @@ app.controller('MainCtrl', function(){
 		{ name: 'javascript' },
 		{ name: 'web_design' },
 		{ name: 'webdev' }
-	];
-
+	];	
 });
+
+app.controller('ApiCtrl', ['apiService', function(apiService) {
+	var self = this;
+
+	apiService.
+		success(function(data) {
+			self.posts = data.data.children;
+		});
+
+}]);
 
 app.directive('submission', function(){
 	// Runs during compile
