@@ -7,15 +7,22 @@ app.factory('apiService', ['$http', function ($http) {
 		{ name: 'javascript' },
 		{ name: 'web_design' },
 		{ name: 'webdev' }
-	];	
+	];
+	
+	self.subReddits = [];
 
 	function listSubreddits() {
 		for(i = 0; i < self.subreddits.length; i++) {
 			subreddit = self.subreddits[i].name;
-			return $http.get('https://www.reddit.com/r/' + subreddit + '/.json?limit=10');
+			// Return will exit loop 
+			// Save to a variable so you can return the list
+			
+			self.subReddits[i] = $http.get('https://www.reddit.com/r/' + subreddit + '/.json?limit=10');
+			//return $http.get('https://www.reddit.com/r/' + subreddit + '/.json?limit=10');
 		}
 	}
 
-	return listSubreddits();
+	return self.subReddits;
+	//return listSubreddits();
 
 }]);
