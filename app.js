@@ -1,4 +1,4 @@
-var app = angular.module('ngReddit', ['ngRoute']);
+var app = angular.module('ngReddit', ['ngRoute', 'angular-loading-bar']);
 
 app.config(function($routeProvider){
 	$routeProvider
