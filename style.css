@@ -45,11 +45,15 @@ nav ul li a {
 	padding: 8px 30px;
 	background-color: #eeeff1;
 	color: black;
+	letter-spacing: 1px;
 }
 nav ul li a:hover, .active {
 	background: #2f2f2f;
 	text-decoration: none;
 	color: white;
+}
+nav ul li a:after {
+	color: #666;
 }
 .feedbox {
 	width: 33%;
