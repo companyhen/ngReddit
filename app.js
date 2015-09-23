@@ -72,3 +72,12 @@ app.directive('showSubreddits', function(){
 		replace: true
 	};
 });
+
+app.directive('subredditPosts', function(){
+	// Runs during compile
+	return {
+		restrict: 'E', // E = Element, A = Attribute, C = Class, M = Comment
+		templateUrl: 'partials/subredditPosts.html',
+		replace: true
+	};
+});
