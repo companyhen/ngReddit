@@ -21,15 +21,15 @@ app.config(function($routeProvider){
 
 app.controller('MainCtrl', function(){
 	self = this;
-
 });
 
-app.controller('ApiCtrl', ['$http', 'apiService', function ($http, apiService) {
+app.controller('ApiCtrl', ['apiService', function (apiService) {
 	var self = this;
 
-	self.getSubs = apiService;
-
-	console.log(self.getSubs);
+	self.getSubs = apiService.then(function(result) {
+		self.getSubs = result[0].data.data.children;
+		console.log(result[0].data.data.children);
+	});
 
 }]);
 
