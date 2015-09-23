@@ -54,8 +54,8 @@ nav ul li a:hover, .active {
 .feedbox {
 	width: 33%;
 	float: left;
-	margin-top: 15px;
 	box-sizing: border-box;
+	margin: 15px 0;
 }
 .feedbox li {
 	list-style: none;
@@ -69,6 +69,9 @@ nav ul li a:hover, .active {
 	display: block;
 	text-decoration: none;
 	color: #dd1b16;
+	white-space: nowrap; 
+  	overflow: hidden;
+  	text-overflow: ellipsis;
 }
 .feedbox li:hover {
 	background-color: #f9f9fa;
@@ -77,4 +80,17 @@ nav ul li a:hover, .active {
 	margin-bottom: 10px;
 	font-family: "Fjalla One";
 	text-align: center;
+}
+footer {
+	width: 100%;
+	height: 80px;
+	clear: both;
+	border-top: 2px solid #eeeff1;
+	background-color: #2f2f2f;
+	color: white;
+	text-align: center;
+	line-height: 80px;
+	bottom: 0;
+	font-size: 0.9em;
+	font-weight: 600;
 }
