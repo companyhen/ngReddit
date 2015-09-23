@@ -29,8 +29,10 @@ app.controller('ApiCtrl', ['apiService', function(apiService) {
 
 	apiService.
 		success(function(data) {
-			self.posts = data.data.children;
+			self.subreddits = data.data.children;
 		});
+
+	// self.subreddits = apiService.groupedSubredditData;
 
 }]);
 

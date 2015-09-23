@@ -1,6 +1,6 @@
 app.factory('apiService', ['$http', function ($http) {
 
-	self.subreddits = [
+	var subreddits = [
 		{ name: 'angularjs' },
 		{ name: 'learnjavascript' },
 		{ name: 'learnprogramming' },
@@ -8,18 +8,17 @@ app.factory('apiService', ['$http', function ($http) {
 		{ name: 'web_design' },
 		{ name: 'webdev' }
 	];	
-	self.groupedSubredditData=[];
-	function listSubreddits() {
-		for(i = 0; i < self.subreddits.length; i++) {
-			subreddit = self.subreddits[i].name;
-			self.groupedSubredditData[i] = $http.get('https://www.reddit.com/r/' + subreddit + '/.json?limit=10');
-			console.log(self.groupedSubredditData);
-			
-		}
-		return $http.get('https://www.reddit.com/r/' + subreddit + '/.json?limit=1000');
-		
-	}
-
-	return listSubreddits();
 	
+	var groupedSubredditData = [];
+
+	function listSubreddits() {
+		for(i = 0; i < subreddits.length; i++) {
+			subreddit = subreddits[i].name;
+			groupedSubredditData[i] = $http.get('https://www.reddit.com/r/' + subreddit + '/.json?limit=10');
+		}
+		console.log(groupedSubredditData);
+		return $http.get('https://www.reddit.com/r/' + subreddit + '/.json?limit=10');
+	}
+	
+	return listSubreddits();
 }]);
