@@ -1,10 +1,57 @@
 <div ng-controller="ApiCtrl as vm">
-	<div class="feedbox" ng-repeat="subreddit in vm.getSubs">
+
+	<div class="feedbox">
 		<ul>
 			<h3>{{ '/r/' + 'AngularJS' }}</h3>
-			<li>
+			<li ng-repeat="subreddit in vm.rAngular">
 				<a href="{{ subreddit.data.url }}">{{ subreddit.data.title }}</a>
 			</li>
 		</ul>
 	</div>
+
+	<div class="feedbox">
+		<ul>
+			<h3>{{ '/r/' + 'LearnJavaScript' }}</h3>
+			<li ng-repeat="subreddit in vm.rLearnJS">
+				<a href="{{ subreddit.data.url }}">{{ subreddit.data.title }}</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="feedbox">
+		<ul>
+			<h3>{{ '/r/' + 'LearnProgramming' }}</h3>
+			<li ng-repeat="subreddit in vm.rLearnProg">
+				<a href="{{ subreddit.data.url }}">{{ subreddit.data.title }}</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="feedbox">
+		<ul>
+			<h3>{{ '/r/' + 'JavaScript' }}</h3>
+			<li ng-repeat="subreddit in vm.rJS">
+				<a href="{{ subreddit.data.url }}">{{ subreddit.data.title }}</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="feedbox">
+		<ul>
+			<h3>{{ '/r/' + 'web_design' }}</h3>
+			<li ng-repeat="subreddit in vm.rWebDesign">
+				<a href="{{ subreddit.data.url }}">{{ subreddit.data.title }}</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="feedbox">
+		<ul>
+			<h3>{{ '/r/' + 'webdev' }}</h3>
+			<li ng-repeat="subreddit in vm.rWebDev">
+				<a href="{{ subreddit.data.url }}">{{ subreddit.data.title }}</a>
+			</li>
+		</ul>
+	</div>
+
 </div>
