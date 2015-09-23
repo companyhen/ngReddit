@@ -8,14 +8,18 @@ app.factory('apiService', ['$http', function ($http) {
 		{ name: 'web_design' },
 		{ name: 'webdev' }
 	];	
-
+	self.groupedSubredditData=[];
 	function listSubreddits() {
 		for(i = 0; i < self.subreddits.length; i++) {
 			subreddit = self.subreddits[i].name;
-			return $http.get('https://www.reddit.com/r/' + subreddit + '/.json?limit=10');
+			self.groupedSubredditData[i] = $http.get('https://www.reddit.com/r/' + subreddit + '/.json?limit=10');
+			console.log(self.groupedSubredditData);
+			
 		}
+		return $http.get('https://www.reddit.com/r/' + subreddit + '/.json?limit=1000');
+		
 	}
 
 	return listSubreddits();
-
+	
 }]);
