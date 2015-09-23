@@ -2,9 +2,9 @@ app.factory('apiService', ['$http', '$q', function ($http, $q) {
 
 	var subreddits = [
 		{ name: 'angularjs' },
-		{ name: 'learnjavascript' },
-		{ name: 'learnprogramming' },
 		{ name: 'javascript' },
+		{ name: 'node' },
+		{ name: 'learnjavascript' },
 		{ name: 'web_design' },
 		{ name: 'webdev' }
 	];	
@@ -21,3 +21,15 @@ app.factory('apiService', ['$http', '$q', function ($http, $q) {
 
 	return listSubreddits();
 }]);
+
+app.factory('aboutService', function() {
+
+	var people = ["Pam L.", "Miesha W.", "Ben B.", "Zac C."];
+
+	return {
+		list: function() {
+			return people;
+		}
+	};
+	
+});

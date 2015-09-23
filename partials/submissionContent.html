@@ -1,1 +1,6 @@
-<p>insert stuff here</p>
+<div ng-controller="AboutCtrl as vm">
+	<p>We are all students at Grand Circus in the JavaScript bootcamp! This worked on a project that created a Reddit subpage puller. We pull all of the reddits that are about programming on to one page. The wonderful indiviuals who worked on this project are:</p>
+	<ul>
+		<li ng-repeat="person in vm.list()">{{ person }}</li>
+	</ul>
+</div>

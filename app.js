@@ -34,16 +34,16 @@ app.controller('ApiCtrl', ['apiService', function (apiService) {
 		self.rAngular = result[0].data.data.children;
 	});
 
-	self.rLearnJS = apiService.then(function(result) {
-		self.rLearnJS = result[1].data.data.children;
-	});
-
-	self.rLearnProg = apiService.then(function(result) {
-		self.rLearnProg = result[2].data.data.children;
-	});
-
 	self.rJS = apiService.then(function(result) {
-		self.rJS = result[3].data.data.children;
+		self.rJS = result[1].data.data.children;
+	});
+
+	self.rNode = apiService.then(function(result) {
+		self.rNode = result[2].data.data.children;
+	});
+
+	self.rLearnJS = apiService.then(function(result) {
+		self.rLearnJS = result[3].data.data.children;
 	});
 
 	self.rWebDesign = apiService.then(function(result) {
@@ -53,6 +53,15 @@ app.controller('ApiCtrl', ['apiService', function (apiService) {
 	self.rWebDev = apiService.then(function(result) {
 		self.rWebDev = result[5].data.data.children;
 	});
+}]);
+
+app.controller('AboutCtrl', ['aboutService', function (aboutService) {
+	var self = this;
+
+	self.list = function() {
+		return aboutService.list();
+	};
+	
 }]);
 
 app.directive('submission', function(){
