@@ -26,11 +26,15 @@ app.controller('MainCtrl', function(){
 app.controller('ApiCtrl', ['apiService', function (apiService) {
 	var self = this;
 
-	self.getSubs = apiService.then(function(result) {
-		self.getSubs = result[0].data.data.children;
-		console.log(result[0].data.data.children);
-	});
+	self.subList = [];
 
+	self.getSubs = apiService.then(function(result) {
+		for (i = 0; i < 6; i++) {
+			self.getSubs = result[i].data.data.children;
+			console.log(self.getSubs);
+		}
+	});
+	
 }]);
 
 app.directive('submission', function(){

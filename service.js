@@ -14,7 +14,7 @@ app.factory('apiService', ['$http', '$q', function ($http, $q) {
 	function listSubreddits() {
 		for(i = 0; i < subreddits.length; i++) {
 			subreddit = subreddits[i].name;
-			groupedSubredditData[i] = $http.get('https://www.reddit.com/r/' + subreddit + '/.json?limit=10');
+			groupedSubredditData[i] = $http.get('https://www.reddit.com/r/' + subreddit + '/.json?limit=9');
 		}
 		return $q.all(groupedSubredditData);
 	}
