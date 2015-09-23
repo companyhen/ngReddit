@@ -1,11 +1,10 @@
 <div ng-controller="ApiCtrl as vm">
-	<div class="feedbox" ng-repeat="subreddit in vm.subreddits">
+	<div class="feedbox" ng-repeat="subreddit in vm.getSubs">
 		<ul>
 			<h3>{{ '/r/' + 'subredditname' }}</h3>
 			<li>
-				<a href="{{ subreddit.data.url }}">{{ subreddit.data.title }}</a>
+				<a href="#">{{ subreddit }}</a>
 			</li>
 		</ul>
 	</div>
 </div>
-

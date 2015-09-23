@@ -24,15 +24,12 @@ app.controller('MainCtrl', function(){
 
 });
 
-app.controller('ApiCtrl', ['apiService', function(apiService) {
+app.controller('ApiCtrl', ['$http', 'apiService', function ($http, apiService) {
 	var self = this;
 
-	apiService.
-		success(function(data) {
-			self.subreddits = data.data.children;
-		});
+	self.getSubs = apiService;
 
-	// self.subreddits = apiService.groupedSubredditData;
+	console.log(self.getSubs);
 
 }]);
 

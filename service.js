@@ -16,9 +16,8 @@ app.factory('apiService', ['$http', function ($http) {
 			subreddit = subreddits[i].name;
 			groupedSubredditData[i] = $http.get('https://www.reddit.com/r/' + subreddit + '/.json?limit=10');
 		}
-		console.log(groupedSubredditData);
-		return $http.get('https://www.reddit.com/r/' + subreddit + '/.json?limit=10');
+		return groupedSubredditData;
 	}
-	
+
 	return listSubreddits();
 }]);
