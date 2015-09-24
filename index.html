@@ -6,16 +6,16 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body ng-app="ngReddit" ng-cloak>
-			<header>
-			<h1>&lsaquo;ngReddit&rsaquo;</code></h1>
-			<h4>Your go-to for Reddit Web Development Resources</h4>
-		</header>
+	<header>
+		<h1><a href="#/">ngReddit</a></h1>
+		<h4>Your go-to for Reddit Web Development Resources</h4>
+	</header>
 	<nav ng-controller="HeaderCtrl as vm">
-			<ul>
-				<li><a href="#/" ng-class="{ active: vm.isActive('/')}">Home</a></li>
-				<li><a href="#/about" ng-class="{ active: vm.isActive('/about')}">About</a></li>
-				<li><a href="https://www.codecademy.com/" target="_blank">Learn Code</a></li>
-			</ul>
+		<ul>
+			<li><a href="#/" ng-class="{ active: vm.isActive('/')}">Home</a></li>
+			<li><a href="#/about" ng-class="{ active: vm.isActive('/about')}">About</a></li>
+			<li><a href="https://www.codecademy.com/" target="_blank">Learn Code</a></li>
+		</ul>
 	</nav>
 
 	<div class="container">
