@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500,400italic);
 @import url(https://fonts.googleapis.com/css?family=Fjalla+One);
 
 html {
@@ -27,9 +27,13 @@ header h1 a {
 }
 header h4 {
 	text-align: center;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 0.9em;
 	padding: 0;
 	margin: 0;
 	margin-bottom: 15px;
+	color: #777;
 }
 .container {
 	margin: 0 auto;
