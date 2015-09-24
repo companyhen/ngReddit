@@ -5,12 +5,12 @@ app.config(function($routeProvider){
 		.when('/',
 		{
 			templateUrl: 'partials/main.html',
-			controller: 'MainCtrl'
+			controller: 'ApiCtrl'
 		})
-		.when('/subreddit',
+		.when('/about',
 		{
-			templateUrl: 'partials/subreddit.html',
-			controller: 'MainCtrl'
+			templateUrl: 'partials/about.html',
+			controller: 'AboutCtrl'
 		})
 		.otherwise(
 		{
@@ -19,18 +19,14 @@ app.config(function($routeProvider){
 		});
 });
 
-app.controller('MainCtrl', function(){
-	self = this;
-});
+//////////////////
+// CONTROLLERS //
+////////////////
 
 app.controller('ApiCtrl', ['apiService', function (apiService) {
 	var self = this;
 
 	self.rAngular = apiService.then(function(result) {
-		// for (i = 0; i < 6; i++) {
-		// 	self.getSubs = result[i].data.data.children;
-		// 	console.log(self.getSubs);
-		// }
 		self.rAngular = result[0].data.data.children;
 	});
 
@@ -64,17 +60,11 @@ app.controller('AboutCtrl', ['aboutService', function (aboutService) {
 	
 }]);
 
-app.directive('submission', function(){
-	// Runs during compile
-	return {
-		restrict: 'E', // E = Element, A = Attribute, C = Class, M = Comment
-		templateUrl: 'partials/submissionContent.html',
-		replace: true
-	};
-});
+/////////////////
+// DIRECTIVES //
+///////////////
 
 app.directive('showSubreddits', function(){
-	// Runs during compile
 	return {
 		restrict: 'E', // E = Element, A = Attribute, C = Class, M = Comment
 		templateUrl: 'partials/mainContent.html',
@@ -83,10 +73,17 @@ app.directive('showSubreddits', function(){
 });
 
 app.directive('subredditPosts', function(){
-	// Runs during compile
 	return {
 		restrict: 'E', // E = Element, A = Attribute, C = Class, M = Comment
 		templateUrl: 'partials/subredditPosts.html',
+		replace: true
+	};
+});
+
+app.directive('about', function(){
+	return {
+		restrict: 'E', // E = Element, A = Attribute, C = Class, M = Comment
+		templateUrl: 'partials/aboutContent.html',
 		replace: true
 	};
 });
