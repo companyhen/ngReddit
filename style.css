@@ -55,7 +55,8 @@ nav ul li a:after {
 	color: #666;
 }
 .feedbox {
-	float: left;
+	vertical-align:top;
+	display: inline-block;
 	box-sizing: border-box;
 	margin-bottom: 15px;
 }
