@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500,400italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300italic,500,700);
 @import url(https://fonts.googleapis.com/css?family=Fjalla+One);
 
 html {
@@ -27,7 +27,7 @@ header h1 a {
 }
 header h4 {
 	text-align: center;
-	font-weight: 400;
+	font-weight: 300;
 	font-style: italic;
 	font-size: 0.9em;
 	padding: 0;
@@ -52,9 +52,10 @@ nav ul li {
 	text-align: center;
 }
 nav ul li a {
-	font-family: "Open Sans", "Helvetica", sans-serif;
+	font-family: "Roboto", "Helvetica", sans-serif;
 	text-decoration: none;
 	text-transform: uppercase;
+	font-weight: 500;
 	font-size: 0.7em;
 	padding: 5px 35px;
 	background-color: #eeeff1;
@@ -65,9 +66,6 @@ nav ul li a:hover, .active {
 	background: #2f2f2f;
 	text-decoration: none;
 	color: white;
-}
-nav ul li a:after {
-	color: #666;
 }
 .feedbox {
 	vertical-align:top;
@@ -99,6 +97,15 @@ nav ul li a:after {
 .feedbox li:hover {
 	background-color: #f9f9fa;
 }
+.feedbox li:active {
+	background-color: #ddd;
+}
+.feedbox li a:active {
+	color: #fff;
+}
+.feedbox li a:visited {
+	color: #a51e22;
+}
 .feedbox h3 {
 	margin-bottom: 10px;
 	font-family: "Fjalla One";
@@ -113,14 +120,14 @@ footer {
 	width: 100%;
 	height: 80px;
 	clear: both;
-	border-top: 2px solid #eeeff1;
+	border-top: 4px solid #545454;
 	background-color: #2f2f2f;
 	color: white;
 	text-align: center;
 	line-height: 80px;
 	bottom: 0;
 	font-size: 0.9em;
-	font-weight: 600;
+	font-weight: 400;
 	margin-top: 70px;
 }
 .container-small {
