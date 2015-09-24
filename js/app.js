@@ -23,6 +23,14 @@ app.config(function($routeProvider){
 // CONTROLLERS //
 ////////////////
 
+app.controller('HeaderCtrl', ['$location', function($location) {
+    var self = this;
+
+    self.isActive = function (viewLocation) { 
+        return viewLocation === $location.path();
+    };
+}]);
+
 app.controller('ApiCtrl', ['apiService', function (apiService) {
 	var self = this;
 
