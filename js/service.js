@@ -7,7 +7,7 @@ app.factory('apiService', ['$http', '$q', function ($http, $q) {
 		{ name: 'learnjavascript' },
 		{ name: 'web_design' },
 		{ name: 'webdev' }
-	];	
+	];
 	
 	var groupedSubredditData = [];
 
