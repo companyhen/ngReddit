@@ -102,7 +102,13 @@ footer {
 	font-size: 0.9em;
 	font-weight: 600;
 }
-
+.container-small {
+	width: 75%;
+	margin: 0 auto;
+}
+h3 {
+	font-family: "Fjalla One";
+}
 @media screen and (min-width: 1200px) {
 	.container {
 		width: 75%;

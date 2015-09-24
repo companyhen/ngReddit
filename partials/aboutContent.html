@@ -1,5 +1,8 @@
-<div ng-controller="AboutCtrl as vm">
-	<p>We are all students at Grand Circus in the JavaScript bootcamp! This worked on a project that created a Reddit subpage puller. We pull all of the reddits that are about programming on to one page. The wonderful indiviuals who worked on this project are:</p>
+<div class="container-small" ng-controller="AboutCtrl as vm">
+<h3>Why ngReddit?</h3>
+	<p>Many of us have found the help and guidance from Reddit to be extremely useful in regards to learning front-end web development. We have created ngReddit to help aggregate some of the resources available from Reddit for the public.<p>
+	<h3>Who are we?</h2>
+	<p>We are all JavaScript bootcamp students at Grand Circus Detroit! Whilst working on a AngularJS project, we wanted to create something that could help students like ourselves and thus ngReddit was born. The wonderful indiviuals who worked on this project are:</p>
 	<ul>
 		<li ng-repeat="person in vm.list()">{{ person }}</li>
 	</ul>
