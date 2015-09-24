@@ -76,7 +76,7 @@ nav ul li a:after {
 	border-top: 2px solid #eeeff1;
 	display: block;
 }
-.feedbox a {
+.feedbox li a {
 	display: block;
 	text-decoration: none;
 	color: #dd1b16;
@@ -91,6 +91,11 @@ nav ul li a:after {
 	margin-bottom: 10px;
 	font-family: "Fjalla One";
 	text-align: center;
+}
+.feedbox h3 a {
+	list-style: none;
+	color: #2f2f2f;
+	text-decoration: none;
 }
 footer {
 	width: 100%;
